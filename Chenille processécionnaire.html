@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chenilles Processionnaires — Fiche Visuelle</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green-dark: #1a3320;
+  --green-mid: #2d5a3d;
+  --green-light: #4a8c5c;
+  --amber: #d4882a;
+  --amber-light: #f0b855;
+  --red: #c0392b;
+  --cream: #f5f0e8;
+  --tan: #e8dcc8;
+  --text: #1a1a14;
+  --card-bg: #ffffff;
+  --radius: 8px;
+  --shadow: 0 2px 10px rgba(0,0,0,0.07);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--cream); font-family: 'DM Sans', sans-serif; color: var(--text); font-size: 13.5px; line-height: 1.55; }
+
+/* HEADER */
+.header { background: var(--green-dark); color: var(--cream); padding: 36px 40px 32px; position: relative; overflow: hidden; }
+.header::before {
+  content: ''; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='32' stroke='%234a8c5c' stroke-opacity='0.12' stroke-width='2' fill='none'/%3E%3Ccircle cx='40' cy='40' r='18' stroke='%234a8c5c' stroke-opacity='0.08' stroke-width='2' fill='none'/%3E%3C/svg%3E") repeat;
+  opacity: 0.7;
+}
+.header-inner { position: relative; max-width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.header h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4.5vw, 46px); font-weight: 900; line-height: 1.05; letter-spacing: -0.5px; }
+.header h1 span { color: var(--amber-light); display: block; }
+.header-sub { font-size: 12px; font-weight: 300; opacity: 0.65; margin-top: 8px; letter-spacing: 1px; text-transform: uppercase; }
+.warning-badge { background: var(--red); color: white; padding: 10px 18px; border-radius: 4px; font-size: 12.5px; font-weight: 600; display: flex; align-items: center; gap: 7px; white-space: nowrap; }
+
+/* PAGE */
+.page { max-width: 960px; margin: 0 auto; padding: 28px 24px 48px; display: flex; flex-direction: column; gap: 24px; }
+
+/* SECTION TITLES */
+.sec-title { display: flex; align-items: center; gap: 9px; font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--green-dark); margin-bottom: 14px; }
+.sec-title .num { width: 28px; height: 28px; background: var(--green-dark); color: var(--cream); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+.sec-title.amber { color: var(--amber); }
+.sec-title.amber .num { background: var(--amber); }
+
+/* ID CARDS */
+.id-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 580px) { .id-grid { grid-template-columns: 1fr; } }
+.id-card { background: var(--card-bg); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); border-top: 3px solid var(--green-light); }
+.id-card.pine { border-top-color: var(--amber); }
+.id-card.oak  { border-top-color: var(--green-light); }
+.id-card-title { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+.badge { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.4px; }
+.badge-pine { background: #fef3de; color: #b06d10; }
+.badge-oak  { background: #e8f5ee; color: #2d6b45; }
+.trait { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 8px; font-size: 13px; }
+.trait:last-child { margin-bottom: 0; }
+.trait-icon { font-size: 13px; flex-shrink: 0; margin-top: 1px; width: 18px; }
+.trait-key  { font-weight: 600; color: var(--green-dark); min-width: 72px; flex-shrink: 0; }
+
+/* GALLERY */
+.gallery-wrap { margin: 0 -24px; padding: 0 24px; }
+.hscroll { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 8px; scrollbar-width: thin; scrollbar-color: var(--amber) var(--tan); }
+.hscroll::-webkit-scrollbar { height: 3px; }
+.hscroll::-webkit-scrollbar-track { background: var(--tan); }
+.hscroll::-webkit-scrollbar-thumb { background: var(--amber); border-radius: 2px; }
+.hcard { flex: 0 0 160px; scroll-snap-align: start; background: var(--card-bg); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border-top: 3px solid var(--amber); cursor: zoom-in; transition: transform 0.15s, box-shadow 0.15s; }
+.hcard:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+.hcard-img { width: 160px; height: 140px; overflow: hidden; background: var(--tan); }
+.hcard-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
+.hcard:hover .hcard-img img { transform: scale(1.05); }
+.hcard-cap { padding: 7px 9px 9px; }
+.hcard-tag { display: block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--amber); margin-bottom: 2px; }
+.hcard-label { font-size: 11px; color: #555; line-height: 1.35; }
+.scroll-hint { font-size: 11px; color: #aaa; text-align: center; margin-top: 7px; letter-spacing: 0.3px; }
+
+/* ALERTS */
+.alert { border-radius: var(--radius); padding: 13px 15px; display: flex; gap: 11px; align-items: flex-start; margin-bottom: 12px; }
+.alert:last-child { margin-bottom: 0; }
+.alert-red   { background: #fdecea; border: 1.5px solid #e74c3c; }
+.alert-amber { background: #fef9ee; border: 1.5px solid var(--amber); }
+.alert-icon  { font-size: 20px; flex-shrink: 0; line-height: 1; margin-top: 1px; }
+.alert h4    { font-size: 13px; font-weight: 600; margin-bottom: 3px; }
+.alert p     { font-size: 12.5px; line-height: 1.5; color: #333; }
+
+/* URGENCY */
+.urgency-bar { background: var(--red); border-radius: var(--radius); padding: 14px 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 12px; }
+@media (max-width: 480px) { .urgency-bar { grid-template-columns: 1fr; } }
+.urg-item { display: flex; align-items: center; gap: 12px; color: white; }
+.urg-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; line-height: 1; flex-shrink: 0; }
+.urg-txt { font-size: 12px; line-height: 1.4; }
+.urg-txt strong { display: block; font-size: 13px; margin-bottom: 2px; }
+
+.info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 480px) { .info-row { grid-template-columns: 1fr; } }
+
+/* ACTION CARDS */
+.action-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+@media (max-width: 640px) { .action-grid { grid-template-columns: repeat(2, 1fr); } }
+.action-card { background: var(--card-bg); border-radius: var(--radius); padding: 14px; box-shadow: var(--shadow); border-left: 3px solid var(--green-mid); }
+.action-card.meca { border-left-color: #5b8dd9; }
+.action-card.trap { border-left-color: var(--amber); }
+.action-card.bio  { border-left-color: var(--green-light); }
+.action-card.prev { border-left-color: #9b59b6; }
+.action-icon { font-size: 20px; margin-bottom: 7px; display: block; }
+.action-card h4 { font-size: 13px; font-weight: 600; margin-bottom: 4px; color: var(--green-dark); }
+.action-card p  { font-size: 12px; line-height: 1.45; color: #444; }
+
+/* STEPS */
+.steps { display: flex; flex-direction: column; gap: 10px; }
+.step { background: var(--card-bg); border-radius: var(--radius); padding: 12px 15px; display: flex; gap: 12px; align-items: flex-start; box-shadow: var(--shadow); }
+.step-num { width: 24px; height: 24px; background: var(--green-mid); color: white; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px; flex-shrink: 0; }
+.step h4 { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+.step p  { font-size: 12.5px; line-height: 1.5; color: #444; }
+.step a  { color: var(--green-mid); font-weight: 500; }
+
+/* CALENDAR */
+.cal-wrap { display: flex; flex-direction: column; gap: 14px; margin-top: 14px; }
+
+.cal-block { background: var(--card-bg); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); overflow: hidden; }
+.cal-pine { border-top: 3px solid var(--amber); }
+.cal-oak  { border-top: 3px solid var(--green-light); }
+
+.cal-header { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; margin-bottom: 14px; color: var(--green-dark); }
+
+.cal-grid { display: flex; flex-direction: column; gap: 7px; margin-bottom: 8px; }
+
+.cal-row { display: grid; grid-template-columns: 190px 1fr; gap: 10px; align-items: center; }
+@media (max-width: 560px) { .cal-row { grid-template-columns: 1fr; gap: 2px; } }
+
+.cal-action { font-size: 11.5px; font-weight: 500; color: #444; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.cal-months { position: relative; height: 18px; display: flex; align-items: center; }
+
+.cal-bar {
+  position: absolute;
+  left: calc((var(--start) / 12) * 100%);
+  width: calc((var(--span) / 12) * 100%);
+  height: 14px;
+  background: var(--color);
+  border-radius: 3px;
+  opacity: 0.85;
+  min-width: 4px;
+}
+
+.cal-label {
+  position: absolute;
+  left: calc((var(--start) / 12) * 100% + 4px);
+  font-size: 9.5px;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+  line-height: 14px;
+  pointer-events: none;
+}
+
+.cal-months-axis {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  border-top: 1px solid var(--tan);
+  padding-top: 5px;
+  margin-top: 4px;
+}
+.cal-months-axis span { font-size: 10px; color: #aaa; text-align: center; font-weight: 500; }
+
+/* SOURCES */
+.sources { background: var(--green-dark); padding: 28px 24px; }
+.sources-inner { max-width: 960px; margin: 0 auto; }
+.sources-title { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: var(--amber-light); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.sources-title svg { stroke: var(--amber-light); }
+.sources-list { list-style: none; counter-reset: src; display: flex; flex-direction: column; gap: 10px; }
+.sources-list li { counter-increment: src; display: flex; gap: 11px; font-size: 12.5px; line-height: 1.5; color: rgba(245,240,232,0.8); }
+.sources-list li::before { content: counter(src); width: 20px; height: 20px; background: var(--amber); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.sources-list li strong { color: var(--cream); font-weight: 600; }
+.sources-list li span { color: rgba(245,240,232,0.65); }
+.sources-list li a { color: var(--amber-light); font-size: 12px; text-decoration: none; opacity: 0.85; }
+.sources-list li a:hover { opacity: 1; text-decoration: underline; }
+
+/* FOOTER */
+footer { background: #111e15; color: rgba(245,240,232,0.5); text-align: center; padding: 14px; font-size: 11.5px; letter-spacing: 0.3px; }
+
+/* GALLERY OAK VARIANT */
+.oak-title { color: var(--green-mid); }
+.oak-num { background: var(--green-mid) !important; }
+.hcard-oak { border-top-color: var(--green-light); }
+.oak-tag { color: var(--green-mid) !important; }
+.hscroll::-webkit-scrollbar-thumb { background: var(--amber); border-radius: 2px; }
+
+/* LIGHTBOX */
+#lb { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 9999; align-items: center; justify-content: center; cursor: zoom-out; }
+#lb.open { display: flex; }
+#lb img { max-width: 92vw; max-height: 90vh; border-radius: 6px; box-shadow: 0 8px 40px rgba(0,0,0,0.6); }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div>
+      <h1>Chenilles<span>Processionnaires</span></h1>
+      <p class="header-sub">Identification · Risques · Actions à mener</p>
+    </div>
+    <div class="warning-badge">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
+      Menace santé publique
+    </div>
+  </div>
+</header>
+
+<main class="page">
+
+  <!-- ① IDENTIFICATION -->
+  <section>
+    <div class="sec-title"><span class="num">1</span> Comment les reconnaître ?</div>
+    <div class="id-grid">
+      <div class="id-card pine">
+        <div class="id-card-title">🌲 Processionnaire du Pin <span class="badge badge-pine">Hiver · Printemps</span></div>
+        <div class="trait"><span class="trait-icon">🏡</span><span class="trait-key">Habitat</span><span>Pins (maritime, noir, sylvestre…) et cèdres</span></div>
+        <div class="trait"><span class="trait-icon">🕸</span><span class="trait-key">Nids</span><span>Bourses de soie blanche à l'<strong>extrémité des branches</strong>, côté soleil</span></div>
+        <div class="trait"><span class="trait-icon">🐛</span><span class="trait-key">Aspect</span><span>Corps foncé, tête noire, <strong>poils orangés</strong> dessus, blanchâtres sur les flancs</span></div>
+        <div class="trait"><span class="trait-icon">👣</span><span class="trait-key">Comportement</span><span>Descente en file indienne pour s'enterrer (jan.–mai)</span></div>
+      </div>
+      <div class="id-card oak">
+        <div class="id-card-title">🌳 Processionnaire du Chêne <span class="badge badge-oak">Printemps · Été</span></div>
+        <div class="trait"><span class="trait-icon">🏡</span><span class="trait-key">Habitat</span><span>Exclusivement les <strong>feuilles de chênes</strong></span></div>
+        <div class="trait"><span class="trait-icon">🕸</span><span class="trait-key">Nids</span><span>Plaques de soie brune <strong>accolées au tronc</strong>, jusqu'à 1 mètre</span></div>
+        <div class="trait"><span class="trait-icon">🐛</span><span class="trait-key">Aspect</span><span><strong>Gris clair, bande noire</strong> dans le dos ; poils plus longs que le pin</span></div>
+        <div class="trait"><span class="trait-icon">🌙</span><span class="trait-key">Comportement</span><span>Processions <strong>nocturnes</strong> ; nymphose dans l'arbre</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📷 GALERIE -->
+  <section>
+    <div class="sec-title amber"><span class="num">📷</span> Galerie — Processionnaire du Pin</div>
+    <div class="gallery-wrap">
+      <div class="hscroll">
+        <div class="hcard"><div class="hcard-img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/174851172/original.jpg" alt="Nid sur pin" loading="lazy"></div></div>
+        <div class="hcard"><div class="hcard-img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/353535001/original.jpg" alt="Procession" loading="lazy"></div></div>
+        <div class="hcard"><div class="hcard-img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/247354782/large.jpeg" alt="Chenilles" loading="lazy"></div></div>
+        <div class="hcard"><div class="hcard-img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/134869436/large.jpeg" alt="Larves" loading="lazy"></div></div>
+        <div class="hcard"><div class="hcard-img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/180066215/original.jpg" alt="Papillon adulte" loading="lazy"></div></div>
+        <div class="hcard"><div class="hcard-img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/157200441/original.jpg" alt="Papillon sur nid" loading="lazy"></div></div>
+        <div class="hcard"><div class="hcard-img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/157200423/original.jpg" alt="Détail papillon" loading="lazy"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📷 GALERIE CHÊNE -->
+  <section>
+    <div class="sec-title oak-title"><span class="num oak-num">📷</span> Galerie — Processionnaire du Chêne</div>
+    <div class="gallery-wrap">
+      <div class="hscroll">
+        <div class="hcard hcard-oak"><div class="hcard-img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/154843202/original.jpg" alt="Nid sur chêne" loading="lazy"></div></div>
+        <div class="hcard hcard-oak"><div class="hcard-img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/41449399/original.jpg" alt="Chenilles chêne" loading="lazy"></div></div>
+        <div class="hcard hcard-oak"><div class="hcard-img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/79442823/original.jpeg" alt="Procession chêne" loading="lazy"></div></div>
+        <div class="hcard hcard-oak"><div class="hcard-img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/355610486/original.jpg" alt="Larves chêne" loading="lazy"></div></div>
+        <div class="hcard hcard-oak"><div class="hcard-img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/317593420/original.jpg" alt="Chenilles gros plan" loading="lazy"></div></div>
+        <div class="hcard hcard-oak"><div class="hcard-img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/78979393/original.jpg" alt="Papillon chêne" loading="lazy"></div></div>
+        <div class="hcard hcard-oak"><div class="hcard-img"><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/79300650/original.jpg" alt="Nid chêne tronc" loading="lazy"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ SANTÉ & URGENCES -->
+  <section>
+    <div class="sec-title"><span class="num">2</span> Risques pour la santé &amp; urgences</div>
+    <div class="alert alert-red">
+      <div class="alert-icon">⚠️</div>
+      <div><h4>Soies urticantes invisibles (0,1 – 0,2 mm)</h4><p>Irritations <strong>cutanées, oculaires, respiratoires ou digestives</strong>. Les nids vides restent urticants <strong>pendant plusieurs années</strong>.</p></div>
+    </div>
+    <div class="urgency-bar">
+      <div class="urg-item"><div class="urg-num">☎ 15</div><div class="urg-txt"><strong>SAMU — Urgences humaines</strong>Vomissements, malaises, vertiges, difficultés respiratoires</div></div>
+      <div class="urg-item"><div class="urg-num">☎ 112</div><div class="urg-txt"><strong>Urgences européen</strong>En cas de signes graves, appelez immédiatement</div></div>
+    </div>
+    <div class="info-row">
+      <div class="alert alert-amber" style="margin-bottom:0"><div class="alert-icon">🚿</div><div><h4>En cas de contact</h4><p>Douche tiède immédiate, changer de vêtements, ne pas frotter.</p></div></div>
+      <div class="alert alert-amber" style="margin-bottom:0"><div class="alert-icon">🐾</div><div><h4>Animaux exposés</h4><p>Consulter <strong>d'urgence un vétérinaire</strong> si inflammation de la bouche.</p></div></div>
+    </div>
+  </section>
+
+  <!-- ② QUE FAIRE CHEZ SOI -->
+  <section>
+    <div class="sec-title"><span class="num">3</span> Que faire si vous en avez chez vous ?</div>
+    <div class="alert alert-red">
+      <div class="alert-icon">🚫</div>
+      <div><h4>NE JAMAIS manipuler les chenilles ni les nids</h4><p>Même vides, ils restent urticants plusieurs années. Faire appel à un professionnel équipé (combinaison, gants étanches, masque, lunettes).</p></div>
+    </div>
+    <div class="action-grid">
+      <div class="action-card meca"><span class="action-icon">🪚</span><h4>Mécanique</h4><p>Échenillage des nids avec outils adaptés par un professionnel.</p></div>
+      <div class="action-card trap"><span class="action-icon">🪤</span><h4>Piégeage</h4><p>Pièges à collier (pin) ou à <strong>phéromones</strong> pour limiter la reproduction.</p></div>
+      <div class="action-card bio"><span class="action-icon">🧫</span><h4>Biologique</h4><p>Pulvérisation de <em>Bacillus thuringiensis</em> (Btk) sur jeunes larves.</p></div>
+      <div class="action-card prev"><span class="action-icon">🐦</span><h4>Prévention</h4><p><strong>Nichoirs à mésanges</strong> et <strong>gîtes à chauves-souris</strong> pour favoriser les prédateurs naturels.</p></div>
+    </div>
+    <div class="alert alert-green" style="margin-top:12px; margin-bottom:0">
+      <div class="alert-icon">📄</div>
+      <div><h4>Calendrier des actions</h4><p>Pour connaître les périodes d'intervention optimales (BTk, échenillage, pièges, nichoirs…), consultez les <a href="https://chenille-risque.info/wp-content/uploads/2023/05/Recueil-methodes-de-lutte-VF.pdf" target="_blank">documents ressources</a> disponibles en bas de page.</p></div>
+    </div>
+  </section>
+
+  <!-- ③ DEHORS -->
+  <section>
+    <div class="sec-title"><span class="num">4</span> Que faire si vous en voyez hors de chez vous ?</div>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div><h4>Signaler la présence</h4><p>Informez votre <strong>mairie</strong> ou rendez-vous sur <a href="https://signalement-chenilles-processionnaires.atlasante.fr/apropos/pr-sentation">signalement-chenilles-processionnaires.atlasante.fr</a> pour la surveillance du territoire.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div><h4>Éviter l'exposition</h4><p>Ne restez pas sous les arbres infestés. Respectez un <strong>périmètre de sécurité de 5 à 10 mètres</strong> autour des arbres touchés et la signalétique des collectivités.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div><h4>Informer les voisins</h4><p>Si vous constatez une présence chez un voisin, informez-le : la prolifération est classée comme <strong>menace pour la santé humaine</strong> dans le code de la santé publique.</p></div></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- SOURCES -->
+<section class="sources">
+  <div class="sources-inner">
+    <div class="sources-title">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+      Sources documentaires
+    </div>
+    <ol class="sources-list">
+      <li><div><strong>Recueil des méthodes de lutte — FREDON France / Observatoire des chenilles processionnaires</strong><br><a href="https://chenille-risque.info/wp-content/uploads/2023/05/Recueil-methodes-de-lutte-VF.pdf" target="_blank">chenille-risque.info — Recueil méthodes de lutte (PDF)</a></div></li>
+      <li><div><strong>Boîte à outils du référent chenilles processionnaires — Chenille Risque</strong><br><a href="https://chenille-risque.info/outils/boite-a-outils-du-referent-chenilles-processionnaires/" target="_blank">chenille-risque.info — Boîte à outils référent</a></div></li>
+      <li><div><strong>Vade-mecum chenilles processionnaires — Chenille Risque</strong><br><a href="https://chenille-risque.info/wp-content/uploads/2023/06/vademecum-chenilles-processionnaires.pdf" target="_blank">chenille-risque.info — Vade-mecum (PDF)</a></div></li>
+      <li><div><strong>Chenilles processionnaires — ARS Occitanie réunit les acteurs impliqués en région</strong><br><a href="https://www.fredonoccitanie.com/surveillance/2024/03/01/chenilles-processionnaires-ars-occitanie-reunit-les-acteurs-impliques-en-region-occitanie/" target="_blank">fredonoccitanie.com — Article ARS Occitanie</a></div></li>
+    </ol>
+  </div>
+</section>
+
+<footer>Fiche d'information — Chenilles processionnaires · Compilation de sources officielles</footer>
+
+<div id="lb" onclick="this.classList.remove('open')"><img id="lb-img" src="" alt=""></div>
+<script>
+  document.querySelectorAll('.hcard').forEach(c => {
+    c.addEventListener('click', () => {
+      document.getElementById('lb-img').src = c.querySelector('img').src;
+      document.getElementById('lb').classList.add('open');
+    });
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') document.getElementById('lb').classList.remove('open'); });
+</script>
+</body>
+</html>
